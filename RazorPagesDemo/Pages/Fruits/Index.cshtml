@@ -1,0 +1,12 @@
+﻿@page
+@using RazorPagesDemo.Models
+@model RazorPagesDemo.Pages.Fruits.IndexModel
+@{
+}
+
+@foreach(Fruit fruit in Model.Fruits)
+{
+    <a asp-page="/Fruits/Details" asp-route-id="@fruit.Id" asp-route-name="@fruit.Name">
+        <h1>@fruit.Name</h1>
+    </a>
+}
